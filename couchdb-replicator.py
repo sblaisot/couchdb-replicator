@@ -145,7 +145,7 @@ def parse_args(argv=sys.argv):
     optional_named.add_argument('-h',
                                 '--help',
                                 action='help',
-                                help='show this help message and exit')
+                                help='Show this help message and exit')
     optional_named.add_argument('-a',
                                 '--all',
                                 help='Replicate all dbs from source to '
@@ -161,18 +161,19 @@ def parse_args(argv=sys.argv):
                                 default=False)
     optional_named.add_argument('-c',
                                 '--concurrency',
-                                help='force monthly',
+                                help='Maximum number of simultaneous '
+                                     'replications',
                                 action='store',
                                 default=DEFAULT_CONCURRENCY)
     optional_named.add_argument('--use_target',
-                                help='Use the target\'s _replicate API when'
+                                help='Use the target\'s _replicate API when '
                                      'replicating.\n'
-                                     'By default, the source\'s _replicate API'
-                                     'is used',
+                                     'By default, the source\'s _replicate '
+                                     'API is used',
                                 action='store_true',
                                 default=False)
     optional_named.add_argument('--system_dbs',
-                                help='Do not skip "system" databases starting'
+                                help='Do not skip "system" databases starting '
                                      'with underscore\n'
                                      'such as _users, _global_changes, etc...',
                                 action='store_true',
@@ -195,9 +196,9 @@ def parse_args(argv=sys.argv):
                                 default=False)
     optional_named.add_argument('-d',
                                 '--debug',
-                                help='Debug info such as details of the'
+                                help='Debug info such as details of the '
                                      'requests and responses.\n'
-                                     'Useful for determining why long'
+                                     'Useful for determining why long '
                                      'replications are failing',
                                 action='store_true',
                                 default=False)

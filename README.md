@@ -27,12 +27,12 @@ A python program to replicate some or all databases between couchdb clusters.
       DB                    Databases to replicate
 
     optional arguments:
-      -h, --help            show this help message and exit
+      -h, --help            Show this help message and exit
       -a, --all             Replicate all dbs from source to destination.
                             Use with -i to replicate "all but ..."
       -i SKIP, --skip SKIP  Comma-separated list of db to skip (i.e.NOT synchronize)
       -c CONCURRENCY, --concurrency CONCURRENCY
-                            force monthly
+                            Maximum number of simultaneous replications
       --use_target          Use the target's _replicate API when replicating.
                             By default, the source's _replicate API is used
       --system_dbs          Do not skip "system" databases starting with underscore
